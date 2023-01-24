@@ -77,8 +77,8 @@ li{
 
 #profile-pic{
     width: 270px;
-    height: 250px;
-    /* height: 150px; */
+    /* height: 250px; */
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
