@@ -1,4 +1,4 @@
-# Dennis Ivy Digital Resume
+<!-- # Dennis Ivy Digital Resume
 
 A digital resume website built based on the content from my personal REAL [resume](./assets/resume.pdf) 
 
@@ -22,4 +22,4 @@ This website has no auto toggle theme switcher, therefor to change themes you mu
 --mainLinkColor:var(--mainLinkColor-light);
 --mainBorderColor:var(--mainBorderColor-light);
 --mainBgColor:var(--mainBgColor-light);
-```
+``` -->
