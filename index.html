@@ -7,10 +7,61 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles/main.css">
+        <style>
+            #theme-icon{
+                background-color: #fff;
+                border-radius: 100%;
+                height: 32px;
+                cursor: pointer;
+            }
+
+            #theme-icon-wrapper{
+                display: flex;
+                justify-content: flex-end;
+            }
+        </style>
+
+        <script>
+            var r = document.querySelector(':root');
+            function myFunction_get() {
+        
+              var rs = getComputedStyle(r);
+        
+              if(rs.getPropertyValue('--mainTextColor-dark') == "#fff") 
+                return 'Dark' 
+            
+                return 'Light';
+
+              
+            }
+
+            function myFunction_set() {
+                const theme = myFunction_get()
+                let button = document.getElementById("theme-icon").setAttribute("src", theme =="Dark" ? "./assets/icons/dark-mode.png" : "./assets/icons/light-mode.png");
+             
+                if(theme != 'Light'){
+                    r.style.setProperty('--mainTextColor-dark','#000');
+                    r.style.setProperty('--secondaryTextColor-dark','rgb(51 51 51)');
+                    r.style.setProperty('--mainLinkColor-dark','#0da2b8');
+                    r.style.setProperty('--mainBorderColor-dark','rgb(218, 218, 218)');
+                    r.style.setProperty('--mainBgColor-dark','rgb(249, 250,251)');
+                }
+                else{
+                    r.style.setProperty('--mainTextColor-dark','#fff');
+                    r.style.setProperty('--secondaryTextColor-dark','#adb0b1');
+                    r.style.setProperty('--mainLinkColor-dark','rgb(30, 190,214)');
+                    r.style.setProperty('--mainBorderColor-dark','#2b3031');
+                    r.style.setProperty('--mainBgColor-dark','#131415');
+                }
+              
+            }
+            </script>
     </head>
     <body>
         <div id="container--main">
-
+            <div id="theme-icon-wrapper" onclick="myFunction_set()">
+                <img id="theme-icon" src="./assets/icons/light-mode.png">
+            </div>
             <section id="wrapper--hero" class="section--page">
                 <img id="profile-pic" src="./assets/images/profile_pic.jpeg">
 
