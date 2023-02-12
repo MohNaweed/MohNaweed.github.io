@@ -162,8 +162,8 @@ li{
 @media(max-width:600px){
 
     .section--page{
-        padding-top: 1em;
-        padding-bottom: 1em;
+        /* padding-top: 1em; */
+        /* padding-bottom: 1em; */
     }
 
     #wrapper--hero{
